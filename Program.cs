@@ -10,6 +10,14 @@ namespace Magic8Ball
     {
         static void Main(string[] args)
         {
+            
+
+            Console.WriteLine(@"Magic 8 Ball!
+
+Ask a question: ");
+            Console.ReadLine();
+
+
         }
     }
 }
