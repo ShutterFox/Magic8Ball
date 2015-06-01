@@ -8,7 +8,7 @@ namespace Magic8Ball
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
             
@@ -18,6 +18,7 @@ namespace Magic8Ball
 
 Ask a question: ");
             Console.ReadLine();
+            Answer();
         }
 
 
@@ -38,34 +39,19 @@ Ask a question: ");
                     int answer = rnd.Next(0, 9);
                     Console.WriteLine(answers[answer]);
 
-                    int select;
-                    string menuselect;
-                    try
-                    {
-                        Console.WriteLine(@"Ask another question?
-");
-                        menuselect = Console.ReadLine();
-                        select = int.Parse(menuselect);
-                        switch (select)
-                        {
-                            case 1:
-                                Console.Clear();
-                                Main();
-                                break;
-                            case 2:
-                                Console.Clear();
-                                Quit();
-                                break;
-                        }
+                    Console.WriteLine("Press Enter to ask another question: ");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Main();
+
+                    
+                        
                     }
 
-                    catch { }
+                    
             
            
         }
-        static void Quit()
-        { Console.WriteLine("Quitting...");
-        }
-       
+        
     }
-}
+
